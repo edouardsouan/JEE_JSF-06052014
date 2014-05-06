@@ -11,12 +11,12 @@
 	<!-- précisez le nom et l'email de chaque membre de votre groupe -->
 	<developers>
 		<developer>
-			<name>VOTRE_NOM</name>
-			<email>VOTRE_EMAIL</email>
+			<name>Saint-Orens Alexandre</name>
+			<email>alendre.saintorens@gmail.com</email>
 		</developer>
 		<developer>
-			<name>VOTRE_NOM</name>
-			<email>VOTRE_EMAIL</email>
+			<name>Souan Edouard</name>
+			<email>souan.edouard0@gmail.com</email>
 		</developer>
 	</developers>
 
