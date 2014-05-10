@@ -9,10 +9,10 @@
 </h:head>
 <h:body>
     <h:form>
-        <h:commandButton value="un bouton" action="#{monControleur.traiter()}">
+        <h:commandButton value="un bouton" action="#{controlleurPersonne.test()}">
             <f:ajax execute="@form" render="resultat"/>
         </h:commandButton>
     </h:form>
-    <h:outputText id="resultat" value="#{monControleur.resultat}"/>
+    <h:outputText id="resultat" value="#{controlleurPersonne.resultat}"/>
 </h:body>
 </html>
