@@ -7,7 +7,7 @@ import javax.inject.Named;
 @ApplicationScoped
 
 public class ControlleurPersonne {
-    private String resultat= "test";
+    private String resultat;
     public void test()
     {
         resultat = "test";
