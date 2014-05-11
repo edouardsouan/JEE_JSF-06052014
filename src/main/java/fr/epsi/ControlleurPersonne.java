@@ -13,7 +13,7 @@ public class ControlleurPersonne {
         return resultat;
     }
 
-    public void traiter(){
-        resultat = "Bravo, vous avez fait une requête Ajax !";
+    public void traiter(Personne personne){
+        resultat = "Bravo "+personne.getNom()+", vous avez "+personne.getAge()+" ans.";
     }
 }
