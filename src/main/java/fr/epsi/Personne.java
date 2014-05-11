@@ -12,6 +12,9 @@ import javax.inject.Named;
 public class Personne {
     private String nom;
     private int age;
+    private boolean agreed;
+
+    public Personne(){}
 
     public String getNom() {
         return nom;
@@ -28,4 +31,8 @@ public class Personne {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void setAgreed(boolean agreed){ this.agreed = agreed;}
+
+    public boolean getAgreed(){return agreed;}
 }

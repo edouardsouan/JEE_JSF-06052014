@@ -1,6 +1,6 @@
 package fr.epsi;
 
-import javax.faces.bean.RequestScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 @Named
@@ -13,7 +13,7 @@ public class ControlleurPersonne {
         return resultat;
     }
 
-    public void traiter(Personne personne){
-        resultat = "Bravo"+personne.getNom()+", vous avez fait une requête Ajax !";
+    public void traiter(){
+        resultat = "Bravo, vous avez fait une requête Ajax !";
     }
 }
