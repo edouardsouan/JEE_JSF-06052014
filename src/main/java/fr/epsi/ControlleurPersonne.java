@@ -14,6 +14,6 @@ public class ControlleurPersonne {
     }
 
     public void traiter(Personne personne){
-        resultat = "Bravo "+personne.getNom()+", vous avez "+personne.getAge()+" ans.";
+        resultat = "Bonjour "+personne.getNom()+", vous avez "+personne.getAge()+" ans.";
     }
 }

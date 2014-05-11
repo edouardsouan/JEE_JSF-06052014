@@ -17,12 +17,15 @@
         <h:outputLabel for="nom" value="nom" />
         <h:inputText id="nom" value="#{personne.nom}" />
 
+        <br/>
         <h:outputLabel for="age" value="âge" />
         <h:inputText id="age" value="#{personne.age}" />
 
+        <br/>
         <h:outputLabel for="cgs" value="Conditions générales" />
         <h:selectBooleanCheckbox id="cgs" value="#{personne.agreed}" />
 
+        <br/>
         <h:commandButton value="Valider" action="#{controlleurPersonne.traiter(personne)}">
             <f:ajax execute="@form" render="resultat" />
         </h:commandButton>
