@@ -16,23 +16,26 @@
     <h:form>
 
         <h:outputLabel for="login" value="login" />
-        <h:inputText id="login" value="#{personne.login}" />
-
+        <h:inputText label="login" id="login" value="#{personne.login}" required="true"> <f:validateBean sizeId="login" /></h:inputText>
+        <h:message for="login" style="color:red" />
         <br/>
         <h:outputLabel for="email" value="email" />
-        <h:inputText id="email" value="#{personne.email}" />
+        <h:inputText label="email" id="email" value="#{personne.email}" required="true"> <f:validateBean sizeId="email" /></h:inputText>
+        <h:message for="email" style="color:red" />
 
         <br/>
         <h:outputLabel for="cgs" value="J'ai lu et aprouvé les conditions générales de ce sites." />
-        <h:selectBooleanCheckbox id="cgs" value="#{personne.agreed}" />
+        <h:selectBooleanCheckbox label="cgs" id="cgs" value="#{personne.agreed}" required="true"> <f:validateBean assertTrue="agreed" /></h:selectBooleanCheckbox>
+        <h:message for="cgs" style="color:red" />
 
-        <br/>h
+        <br/>
         <h:commandButton value="Valider" action="#{controlleurPersonne.traiter(personne)}">
             <f:ajax execute="@form" render="resultat" />
         </h:commandButton>
 
     </h:form>
 
+    <!--requiredMessage="first name is required"/-->
     <h:outputText id="resultat" value="#{controlleurPersonne.resultat}"/>
 
 </h:body>
