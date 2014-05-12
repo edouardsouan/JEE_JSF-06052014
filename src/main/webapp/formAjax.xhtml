@@ -26,7 +26,7 @@
         <h:outputLabel for="cgs" value="J'ai lu et aprouvé les conditions générales de ce sites." />
         <h:selectBooleanCheckbox id="cgs" value="#{personne.agreed}" />
 
-        <br/>
+        <br/>h
         <h:commandButton value="Valider" action="#{controlleurPersonne.traiter(personne)}">
             <f:ajax execute="@form" render="resultat" />
         </h:commandButton>

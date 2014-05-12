@@ -10,6 +10,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </h:head>
 <h:body>
-    <p>Bam ! Redirected</p>
+    <p>Récapitulatif :</p>
+    <ul>
+        <li><h:outputText id="login" value="#{personne.login}" /></li>
+        <li><h:outputText id="email" value="#{personne.email}" /></li>
+    </ul>
+
+    <h3><h:link outcome="index" value="Accueil" /></h3>
 </h:body>
 </html>
