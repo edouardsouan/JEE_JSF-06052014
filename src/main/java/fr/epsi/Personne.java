@@ -3,8 +3,6 @@ package fr.epsi;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import javax.validation.constraints.AssertTrue;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 /**
@@ -15,33 +13,32 @@ import javax.validation.constraints.Size;
 @RequestScoped
 public class Personne {
 
-    @Size(min = 1, message = "Le nom est obligatoire !")
-    private String nom;
+    @Size(min = 1, message = "Le login est obligatoire !")
+    private String login;
 
 
-    @Min(value=1, message = "L'âge doit être un nombre positif !")
-    @Max(value=99, message = "L'âge ne peut pas dépasser 99 ans !")
-    private int age;
+    @Size(min=1, message ="L'email est obligatoire !")
+    private String email;
 
     @AssertTrue(message = "Vous devez accepter les conditions générales du site.")
     private boolean agreed;
 
     public Personne(){}
 
-    public String getNom() {
-        return nom;
+    public String getlogin() {
+        return login;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public int getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setAgreed(boolean agreed){ this.agreed = agreed;}

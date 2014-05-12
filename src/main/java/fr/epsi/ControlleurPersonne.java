@@ -14,6 +14,6 @@ public class ControlleurPersonne {
     }
 
     public void traiter(Personne personne){
-        resultat = "Bonjour "+personne.getNom()+", vous avez "+personne.getAge()+" ans.";
+        resultat = "Bonjour "+personne.getlogin()+", votre email : "+personne.getEmail()+" .";
     }
 }

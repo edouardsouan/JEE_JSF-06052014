@@ -10,30 +10,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </h:head>
 <h:body>
-    <p>Formulaire d'inscription</p>
-
-    <h:form>
-
-        <h:outputLabel for="nom" value="nom" />
-        <h:inputText id="nom" value="#{personne.nom}" />
-
-        <br/>
-        <h:outputLabel for="age" value="âge" />
-        <h:inputText id="age" value="#{personne.age}" />
-
-        <br/>
-        <h:outputLabel for="cgs" value="Conditions générales" />
-        <h:selectBooleanCheckbox id="cgs" value="#{personne.agreed}" />
-
-        <br/>
-        <h:commandButton value="Valider" action="#{controlleurPersonne.traiter(personne)}">
-            <f:ajax execute="@form" render="resultat" />
-        </h:commandButton>
-
-    </h:form>
-
-    <h:outputText id="resultat" value="#{controlleurPersonne.resultat}"/>
-
-
+    <h:link outcome="formJsf" value="Formlaire avec JSF SANS ajax" />
+    <h:link outcome="formAjax" value="Formulaire avec JSF AVEC ajax" />
 </h:body>
 </html>
