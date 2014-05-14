@@ -4,6 +4,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 /**
  * Created by edouard on 11/05/14.
@@ -22,6 +23,10 @@ public class Personne {
 
     @AssertTrue(message = "Vous devez accepter les conditions générales du site.")
     private boolean agreed;
+
+    private Date day;
+    private Date time;
+
 
     public Personne(){}
 
@@ -44,4 +49,9 @@ public class Personne {
     public void setAgreed(boolean agreed){ this.agreed = agreed;}
 
     public boolean getAgreed(){return agreed;}
+
+    public Date getDate(){
+        this.day = new Date("dd/mm/YYYY");
+
+        return this.day;}
 }

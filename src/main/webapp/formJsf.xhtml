@@ -12,21 +12,22 @@
 <h:body>
    <p>Formulaire d'adhésion sans ajax</p>
     <h:form>
-
+     <fieldset>
         <h:outputLabel for="login" value="login" />
-        <h:inputText id="login" value="#{personne.login}" />
+        <h:inputText id="login" value="#{personne.login}" required="true" requiredMessage="Un login doit être renseigné."/>
+        <h:message for="login" id="loginError" style="color:red"/>
 
         <br/>
         <h:outputLabel for="email" value="email" />
-        <h:inputText id="email" value="#{personne.email}" />
-
+        <h:inputText id="email" value="#{personne.email}" required="true" requiredMessage="Un email doit être renseigné."/>
+        <h:message for="email" id="emailError" style="color:red" />
         <br/>
-        <h:outputLabel for="cgs" value="J'ai lu et aprouvé les conditions générales de ce sites." />
-        <h:selectBooleanCheckbox id="cgs" value="#{personne.agreed}" />
-
+        <h:outputLabel for="cdgnl" value="J'ai lu et aprouvé les conditions générales de ce sites." />
+        <h:selectBooleanCheckbox id="cdgnl" value="#{personne.agreed}" required="true" requiredMessage="Les conditions générales doivent êtres lues et approuvées."/>
+        <h:message for="cdgnl" id="cdgnlError" style="color:red" />
         <br/>
         <h:commandLink value="Valider" action="resume" />
-
+     </fieldset>
     </h:form>
 </h:body>
 </html>

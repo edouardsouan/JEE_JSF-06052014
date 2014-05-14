@@ -9,12 +9,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </h:head>
 <h:body>
-    <p>Récapitulatif :</p>
-    <ul>
-        <li><h:outputText id="login" value="#{personne.login}" /></li>
-        <li><h:outputText id="email" value="#{personne.email}" /></li>
-    </ul>
-
+    <p>
+        Bienvenue <h:outputText value="#{personne.login}"/>,
+        votre inscription a bien été prise en compte le <h:outputText value="#{personne.day}"/> à heure.
+    </p>
     <h3><h:link outcome="index" value="Accueil" /></h3>
 </h:body>
 </html>
